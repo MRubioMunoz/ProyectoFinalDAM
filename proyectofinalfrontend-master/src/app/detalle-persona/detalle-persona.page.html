@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle de la Persona</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="persona">
+    <ion-item>
+      <ion-card-title >{{persona.Nombre}}</ion-card-title>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>{{persona.Apellidos}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>{{persona.IDLlave}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>{{persona.Email}}</ion-label>
+    </ion-item>
+    <div class="centrado">
+      <ion-button color="danger" fill="solid" mode="ios"  [routerLink]="['/horas/',persona.id]" size="large">Buscar</ion-button>
+      <ion-button color="success" fill="solid" mode="ios" [routerLink]="['/modificar/',persona.id]" size="large">Editar</ion-button>
+    </div>  
+  </ion-card>
+</ion-content>

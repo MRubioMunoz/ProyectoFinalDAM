@@ -1,0 +1,7 @@
+{
+  "name": "ProyectoRecuperacionIonic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

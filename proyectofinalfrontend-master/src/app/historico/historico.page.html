@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Historico por Años</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="centrado">
+    <ion-input type="text" placeholder="Introduce el año Ej: 2020" [(ngModel)]="inputValue" text-right id="input" ></ion-input>
+  </div>
+  <ion-list>
+    <ion-item-sliding *ngFor="let h of horas">
+      <ion-item >
+        <ion-label>{{h.Email}}</ion-label>
+        <ion-label>{{h.Hora}}</ion-label>
+        <ion-label>{{h.Dia}}</ion-label>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+  <div class = "centrado"> 
+    <ion-button display="center" color="medium" fill="solid" mode="ios" size="large"(click) ="buscarAnio()">Buscar</ion-button>
+  </div>
+</ion-content>

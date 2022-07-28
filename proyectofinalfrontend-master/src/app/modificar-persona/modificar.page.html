@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Modificar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="personaForm" (ngSubmit) = "actualizarPersona()">
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input type="text" formControlName="Nombre" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Apellidos</ion-label>
+        <ion-textarea type="text" formControlName="Apellidos"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input type="text" formControlName="Email"></ion-input>
+      </ion-item>
+     
+    </ion-list>
+    <div class="centrado">
+      <ion-button class="centrado" class="ion-margin" [disabled]="!personaForm.valid" type="submit">Actualizar</ion-button>
+    </div>  
+    </form>
+
+</ion-content>
